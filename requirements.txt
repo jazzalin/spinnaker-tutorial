@@ -1,0 +1,5 @@
+matplotlib==3.4.2
+sPyNNaker==1!6.0.0
+numpy==1.20.3
+scipy==1.6.3
+PyNN==0.9.6
