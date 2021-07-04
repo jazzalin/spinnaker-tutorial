@@ -1,19 +1,14 @@
-# Welcome to MkDocs
+# Welcome to a tutorial on SpiNNaker
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+These pages provide a walkthrough on the configuration of a simulation environment based on the SpiNNaker neuromorphic board. The instructions mostly pertain to the use of PyNN with the 48-chip SpiNNaker #1 board (i.e. `spinn5`).
 
-## Commands
+<img src="./img/setup.jpg" alt="SpiNNaker setup" width="500"/>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+Complementary information regarding the 4-chip version can be found in the official [SpiNNaker Installation Guide](http://spinnakermanchester.github.io/spynnaker/6.0.0/PyNNOnSpinnakerInstall.html). This tutorial provides a condensed version of the instructions found on those pages targeting Ubuntu workspaces (Ubuntu 18.04 LTS).
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-$$\sum_{i=1}^{\infty}$$
+## Contents
+- [Environment setup](./installation/setup.md)
+- [SpiNNaker in the context of DBS](./dbs/overview.md)
+- [SpiNNaker for robotics](./robotics/overview.md)
+- [About this tutorial](./about.md)

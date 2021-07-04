@@ -1,5 +1,14 @@
 site_name: SpiNNaker Tutorial
-site_url: https://example.com/
+site_url: 'https://spinnaker-tutorial.readthedocs.io'
 extra_javascript: 
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 theme: readthedocs
+nav:
+    - Home: 'index.md'
+    - 'Introduction':
+      - 'Setup': 'installation/setup.md'
+    - 'DBS':
+      - 'Overview': 'dbs/overview.md'
+    - 'Robotics':
+      - 'Overview': 'robotics/overview.md'
+    - About: 'about.md'
