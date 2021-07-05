@@ -20,7 +20,14 @@ and activated
 source venv/bin/activate
 ```
 
-If the environment has been successfully activated, a `(venv)` will prepend the CLI.
+If the environment has been successfully activated, a `(venv)` will prepend the CLI (to deactivate it, simply run `deactivate` from the CLI). It is a good idea to verify the python version with
+
+```console
+which python
+# <absolute-path-to>/venv/bin/python
+
+python --version
+```
 
 Next, the required python dependencies can be installed and setup.
 
@@ -84,4 +91,61 @@ While we ultimately want to run simulations on the SpiNNaker board, PyNN support
 <a href="https://drive.ebrains.eu/f/5cc33060181844268243/"><img src="../../img/backends.png" alt="PyNN backend options" width="500"></a>
 
 Unfortunately, each backend supports a different subset of the PyNN library. However, significant overlap was found between the SpiNNaker support and the NEST support. For this reason, we have used NEST as a complementary, "off-board", alternative for development. While not required for the tutorial, the following instructions detail the installation of the latest NEST release from source for future reference.
+
+Installing NEST from source may be desired to build in specific extensions or to have access to the latest features. These instructions are independent from the previous sections and therefore, the virtual environment can be deactivated (with `deactivate` at the CLI).
+
+The following instructions will install NEST in `/opt/nest`, but a different directory may be used. `sudo` privileges are (most likely) required to install in this directory.
+
+```console
+# Create directory
+cd /opt && sudo mkdir nest
+
+# Change ownership to current user (not required if NEST is being installed in a home directory)
+sudo chown -R $USER:$USER /opt/nest
+cd nest
+```
+
+The latest release can be retrieved [here](https://github.com/nest/nest-simulator/releases).
+
+```console
+# Download latest release
+# TODO: update to NEST3.0
+wget https://github.com/nest/nest-simulator/archive/refs/tags/v2.20.1.tar.gz
+
+# Extract
+tar -xzvf nest-simulator-2.20.1.tar.gz
+
+# Create build directory
+mkdir nest-simulator-2.20.1-build
+cd nest-simulator-2.20.1-build
+```
+
+The build process supports a number of [CMake options](https://nest-simulator.readthedocs.io/en/latest/installation/cmake_options.html). For instance, to use NEST as the PyNN backend, the python binding (`PyNEST`) will be needed; it is included with the flag `-Dwith-python=3`.
+
+```console
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest/ /opt/nest/nest-simulator-2.20.1 -Dwith-python=3
+```
+
+The output of `cmake` can be inspected to ensure that python support has been included (YES or NO). Then, NEST can be compiled and installed with
+
+```console
+make                # slow
+make install        # fast
+make installcheck   # slow
+```
+
+Finally, NEST environment variables will need to be loaded into the active bash session. The following command will allow these variables to be automatically loaded each time a session is opened.
+
+```console
+echo 'source /opt/nest/bin/nest_vars.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
+To verify that the installation was successful, the NEST version can be printed to the console
+
+```console
+python -c "import nest; print(nest.version())"
+```
+
+
 
