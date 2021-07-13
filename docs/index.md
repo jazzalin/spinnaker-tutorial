@@ -1,19 +1,25 @@
-# Welcome to MkDocs
+# Welcome to a tutorial on SpiNNaker
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+These pages provide a walkthrough on the configuration of a simulation environment based on the SpiNNaker neuromorphic board. The instructions mostly pertain to the use of PyNN with the 48-chip SpiNNaker #1 board (i.e. `spinn5`).
 
-## Commands
+<img src="./img/setup.jpg" alt="SpiNNaker setup" width="500"/>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+Complementary information regarding the 4-chip version can be found in the official [SpiNNaker Installation Guide](http://spinnakermanchester.github.io/spynnaker/6.0.0/PyNNOnSpinnakerInstall.html). This tutorial provides a condensed version of the instructions found on those pages targeting Ubuntu workspaces (Ubuntu 18.04 LTS).
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Contents
 
-$$\sum_{i=1}^{\infty}$$
+- [Environment setup](./installation/setup.md)
+- [SpiNNaker in the context of DBS](./dbs/overview.md)
+- [SpiNNaker for robotics](./robotics/overview.md)
+
+## About
+
+This tutorial stems from research collaboration at the University of Toronto at the intersection of computational neuroscience and robotics. While currently under development, these tutorial pages aim to:
+
+- [ ] provide a *getting-started* guide on how to use the SpiNNaker board with PyNN
+- [ ] offer some examples of the modelling advantages (and limitations) of the SpiNNaker #1 system
+- [ ] explore closed-loop computational neuroscience with applications to deep brain stimulation (DBS)
+- [ ] explore the integration of the SpiNNaker system with robotic tools (e.g. ROS, NRP)
+
+## Contact
