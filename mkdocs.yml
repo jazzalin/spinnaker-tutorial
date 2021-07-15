@@ -9,8 +9,10 @@ extra_javascript:
 theme: readthedocs
 nav:
     - Home: 'index.md'
+    - Background: 'background.md'
     - 'Introduction':
       - 'Setup': 'installation/setup.md'
+      - 'Programming': 'installation/programming.md'
     - 'DBS':
       - 'Overview': 'dbs/overview.md'
     - 'Robotics':

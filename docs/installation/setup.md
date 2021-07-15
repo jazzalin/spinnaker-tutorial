@@ -126,7 +126,7 @@ The build process supports a number of [CMake options](https://nest-simulator.re
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/opt/nest/ /opt/nest/nest-simulator-2.20.1 -Dwith-python=3
 ```
 
-The output of `cmake` can be inspected to ensure that python support has been included (YES or NO). Then, NEST can be compiled and installed with
+The output of `cmake` can be inspected to ensure that python support has been included (`Python bindings: Yes`). Then, NEST can be compiled and installed with
 
 ```console
 make                # slow
