@@ -3,7 +3,7 @@
 <img src="https://neuromorphic.kip.uni-heidelberg.de/c/image/m/default/SpiNNakerLogo.png" alt="SpiNNaker logo" width="300"/>
 
 ## Why *neuromorphic* computing?
-"Don't simulate a brain, build one!"
+"*Don't simulate a brain, build one!*"
 
 - Motivation: design and build from the ground (e.g. transistor) up with a **practical** engineered system in mind
 
@@ -20,15 +20,10 @@
 
 - Computational neuroscience: neuromorphic hardware becomes a tool to validate hypotheses
 
-<a href="https://robotics.sciencemag.org/content/5/49/eabd1911"><img src="../docs/img/robotics_neuro.png" alt="Image needed" width="600"></a>
-
-> No neuromorphic system attempts to reproduce all of the biological detail, but all adhere to the idea that computation is **highly distributed** across small computing elements analogous in some way to
-neurons, connected into networks, with some degree of **flexibility** in the way **connections** are formed. That much is common; the details vary greatly. - [Steve Furber](https://doi.org/10.1088/1741-2560/13/5/051001)
+> "*No neuromorphic system attempts to reproduce all of the biological detail, but all adhere to the idea that computation is **highly distributed** across small computing elements analogous in some way to neurons, connected into networks, with some degree of **flexibility** in the way **connections** are formed. That much is common; the details vary greatly.*" - [Steve Furber](https://doi.org/10.1088/1741-2560/13/5/051001)
 
 ## Early beginnings
-**A historical connection**
-
-<a href="http://www.rossashby.info/letters/turing.html"><img src="http://www.rossashby.info/letters/images/wralx018.jpg" alt="Letter" width="600"></a>
+> "*In working on the ACE I am more interested in the possibility of producing models of the action of the brain than in the practical applications to computing.*" - [Alan Turing ca. 1946](http://www.rossashby.info/letters/turing.html)
 
 - 1948: Alan Turing presents a *connectionist* approach to computing in *Intelligent Machinery* [(Turing, 1948)](https://www.npl.co.uk/getattachment/about-us/History/Famous-faces/Alan-Turing/80916595-Intelligent-Machinery.pdf?lang=en-GB), with his concept of unorganized machine.
 
@@ -86,7 +81,7 @@ Notable features:
 - purely deterministic (i.e. software model is replicated exactly and software emulator may be used to predict performance of hardware)
 - simulates leaky integrate-and-fire (LIF) neurons
 
-<a href="https://iopscience.iop.org/article/10.1088/1741-2560/13/5/051001"><img src="https://cfn-live-content-bucket-iop-org.s3.amazonaws.com/journals/1741-2552/13/5/051001/1/jneaa3660f2_hr.jpg?AWSAccessKeyId=AKIAYDKQL6LTV7YY2HIK&Expires=1626829696&Signature=V%2FihgmWG%2FAfjWt1BGNEkJpqO7KA%3D" alt="TrueNorth" width="400"></a>
+<a href="https://iopscience.iop.org/article/10.1088/1741-2560/13/5/051001"><img src="https://www.researchgate.net/publication/306248734/figure/fig4/AS:396057763696642@1471438937292/The-NS16e-circuit-board-incorporating-16-IBM-TrueNorth-chips-Photo-courtesy-of-IBM-Corp.png" alt="TrueNorth" width="400"></a>
 
 
 
@@ -98,7 +93,7 @@ Notable features:
 
 - digital
 - based on leaky integrate-and-fire (LIF) neuron
-- **Yet** programmable synapse models for on-chip learning (?)
+- programmable synapse models for on-chip learning
 - ships in different shapes and sizes: Kapoho, Nahuku, Pohoiki
 
 <a href="https://www.intel.ca/content/www/ca/en/research/neuromorphic-computing.html"><img src="https://en.wikichip.org/w/images/thumb/5/51/loihi_nahuku_board.png/1200px-loihi_nahuku_board.png" alt="TrueNorth" width="350"></a>
@@ -113,7 +108,7 @@ Notable features:
 - physical models of neuronal processes (ionic circuits &#8594; electrical circuits) based on the adaptive exponential integrate-and-fire (AdExp) neuron model
 - can run in accelerated mode, up to 10 000 times faster than real-time, hence the long-term learning objective
 
-<a href="https://iopscience.iop.org/article/10.1088/1741-2560/13/5/051001"><img src="https://cfn-live-content-bucket-iop-org.s3.amazonaws.com/journals/1741-2552/13/5/051001/1/jneaa3660f6_hr.jpg?AWSAccessKeyId=AKIAYDKQL6LTV7YY2HIK&Expires=1626829696&Signature=oieKgzwZfsnjrZ3v11ldLkt6D4E%3D" alt="BrainScaleS" width="350"></a>
+<a href="https://iopscience.iop.org/article/10.1088/1741-2560/13/5/051001"><img src="https://www.researchgate.net/publication/306248734/figure/fig7/AS:396057763696647@1471438937704/The-Brainscales-20-wafer-machine-The-wafer-modules-are-mounted-four-per-cabinet-in-five_Q640.jpg" alt="BrainScaleS" width="350"></a>
 
 ### SpiNNaker (University of Manchester, HBP)
 
