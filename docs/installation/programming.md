@@ -10,6 +10,8 @@
     allowfullscreen
 ></iframe>
 
+**N.B.**: $$runtime[s] = sim\\_time \times time\\_scale\\_factor \times 0.001 [s]$$
+
 ## Example: E-I balanced random network
 
 The following pyNN code simulates a balanced E-I random network producing ~15Hz oscillations. It is modified from the [original article](https://www.frontiersin.org/articles/10.3389/fnins.2018.00816/full#supplementary-material) to also run with the NEST backend (minor modifications). The following diagram depicts the simulated E-I network on the left and its allocation on SpiNNaker on the right.
@@ -419,11 +421,12 @@ Getting spikes for inhibitory_pop
     ============================================================
 ```
 
-### Plotting
+**Plotting**
 ```python
 Figure(Panel(exc_data.segments[0].spiketrains, xlabel='Time', ylabel='spikes', xticks=True, yticks=True),
     Panel(inh_data.segments[0].spiketrains, xlabel='Time', ylabel='spikes', xticks=True, yticks=True), size=(20, 8))
 plt.show()
 ```
  
-![Expected output](../../img/example_output.png)
+<img src="../../img/example_output.png" alt="Expected output" width="700"/>
+
