@@ -19,7 +19,7 @@ This tutorial stems from research collaboration at the University of Toronto at 
 
 - [ ] provide a *getting-started* guide on how to use the SpiNNaker board with PyNN
 - [ ] offer some examples of the modelling advantages (and limitations) of the SpiNNaker #1 system
-- [ ] explore closed-loop computational neuroscience with applications to deep brain stimulation (DBS)
+- [ ] explore closed-loop neuroscience with applications to deep brain stimulation (DBS)
 - [ ] explore the integration of the SpiNNaker system with robotic tools (e.g. ROS, NRP)
 
 ## Contact
