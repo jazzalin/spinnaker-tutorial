@@ -84,6 +84,29 @@ If the setup was successful, the terminal will quickly fill up with logs as the 
 
 <img src="../../img/benchmark.png" alt="SpiNNaker setup benchmark" width="500"/>
 
+## C development environment installation (Optional)
+
+It is also possible to develop custom neuron and synapse models for the SpiNNaker system; however, a dedicated development environment is needed to correctly configure the C and Python codebases required to interface with the board via pyNN. In this development environment, the dynamic equations are typically implemented at a lower level (i.e., C), while higher-level (i.e., Python) wrappers relay data access and parameterization to the user.
+
+It is convenient to create a `spinnaker` in a home directory to gather all the necessary dependencies in one place.
+
+```console
+mkdir spinnaker
+cd spinnaker
+```
+
+Follow [these instructions](http://spinnakermanchester.github.io/common_pages/6.0.0/CDevelopmentForSpiNNaker.html) to install the various tools needed to compile the C source code.
+
+It is important to note that the SpiNNaker packages listed in these instructions refer to the most recent *stable* release of the package. However, it is possible to setup the environment such that the latest changes are available for development, even if these haven't been released officially. To do this, clone the corresponding `main`/`master` branches instead of downloading the packaged releases.
+
+Central to the development environment, is the `sPyNNaker` package which effectively bridges the C and Python (pyNN) codebases. Again, its latest release should be [downloaded](https://github.com/SpiNNakerManchester/sPyNNaker/archive/6.0.0.zip) to the `spinnaker` folder or [cloned](https://github.com/SpiNNakerManchester/sPyNNaker/) if recent changes are needed.
+
+Create a new environment variable to point to the `neural_modelling` subfolder of `sPyNNaker`.
+
+```console
+export NEURAL_MODELLING_DIRS=<path-to->/spinnaker/sPyNNaker/neural_modelling
+```
+
 ## NEST installation from source (Optional)
 
 While we ultimately want to run simulations on the SpiNNaker board, PyNN supports many backends which can prove useful to the development of simulations.
